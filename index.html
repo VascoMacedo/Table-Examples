@@ -3,36 +3,80 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Animals table</title>
-    <link href="index.css" rel="stylesheet" type="text/css">
+    <title>My test page</title>
+    <style>
+      
+      body{
+        text-align: center;
+      }
+
+      form{
+        display: inline-block;
+        padding: 1em;
+        border: 1px solid #ccc;
+        border-radius: 1em;
+      }
+
+      p + p{
+        margin-top: 1em;
+      }
+
+      label{        
+        display: inline-block;
+        min-width: 90px;
+        text-align: right;
+      }
+
+      input,
+      textarea{
+        font: 1em sans-serif;
+        width: 300px;
+        box-sizing: border-box;
+        border: 1px solid #999;
+      }
+
+      input:focus,
+      textarea:focus{
+        outline-style: solid;
+        outline-color: #000;
+      }
+
+      textarea{
+        vertical-align: top;
+        height: 5em;
+      }
+
+      .button{
+        padding-left: 90px;
+      }
+
+      button{
+        margin-left: 0.5rem;
+      }
+      
+    </style>
   </head>
   <body>
-    <h1>Animals table</h1>
+    <p>This is my page</p>
+    <form action="/my-handling-form-page" method="post">
+      <p>
+        <label for="">Name:</label>
+        <input type="text" id="name" name="user_name">
+      </p>
+      <p>
+        <label for="mail">E-mail:</label>
+        <input type="email" id="email" name="user_email">
+      </p>
+      <p>
+        <label for="message">Message:</label>
+        <textarea id="message" name="user_message" id=""></textarea>
+      </p>
 
-    <table>
-      <tr>
-        <th colspan="2">Animals</th>
-      </tr>
-      <tr>
-        <th colspan="2">Hippopotamus</th>
-      </tr>
-      <tr>
-        <th rowspan="2">Horse</th>
-        <td>Mare</td>
-      </tr>
-      <tr>
-        <td>Stallion</td>
-      </tr>
-      <tr>
-        <th colspan="2">Crocodile</th>
-      </tr>
-      <tr>
-        <th rowspan="2">Chicken</th>
-        <td>Hen</td>
-      </tr>
-      <tr>
-        <td>Rooster</td>
-      </tr>
-    </table>
+      <p class="button">
+        <button type="submit">Send your Message</button>
+      </p>
+    </form>
   </body>
 </html>
+
+
